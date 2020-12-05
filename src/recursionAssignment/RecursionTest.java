@@ -59,6 +59,21 @@ public class RecursionTest {
       assertEquals(0, Recursion.count7(123));
 
     }
-    
+
+    // Tests for Problem set 2
+    @Test
+    public void Test2_1(){
+      assertEquals("x3.14x", Recursion.changePi("xpix"));
+
+    }
+    @Test
+    public void Test2_2(){
+      assertEquals("3.143.14", Recursion.changePi("pipi"));
+
+    }
+    @Test
+    public void Test2_3(){
+      assertEquals("3.14p", Recursion.changePi("pip"));
+    }
 }
 
