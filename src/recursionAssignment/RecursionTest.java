@@ -46,12 +46,12 @@ public class RecursionTest {
     // Tests for Problem set 1
     @Test
     public void Test1_1(){
-      assertEquals(1, Recursion.count7(127));
+      assertEquals(2, Recursion.count7(717));
 
     }
     @Test
     public void Test1_2(){
-      assertEquals(2, Recursion.count7(717));
+      assertEquals(4, Recursion.count7(7273717));
 
     }
     @Test
