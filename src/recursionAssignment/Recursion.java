@@ -46,4 +46,15 @@ public class Recursion{
     // Recursive call. If the first 2 characters are not "pi", skips over the first character and repeats the method on the rest of the string.
     return str.substring(0,1) + changePi(str.substring(1));
   }
+
+/* 
+* Given an array of ints, compute recursively if the array contains somewhere a value followed in the array by that value times 10. We'll use the convention of considering only the part of the array that begins at the given index. In this way, a recursive call can pass index+1 to move down the array. The initial call will pass in index as 0.
+* @param n = the test integer.
+* @return the number of 7s in the integer
+* @author E.Lai
+*/
+
+  public static boolean array220(int[] intNums, int index) {
+    return array220(intNums, index + 1);
+  }
 }
