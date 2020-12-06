@@ -28,8 +28,8 @@ public class Recursion{
 
 /* 
 * Given a string, compute recursively (no loops) a new string where all appearances of "pi" have been replaced by "3.14".
-* @param n = the test integer.
-* @return the number of 7s in the integer
+* @param str = the Test string
+* @return a new string with the letters "pi" replaced with "3.14"
 * @author E.Lai
 */
 
@@ -49,17 +49,24 @@ public class Recursion{
 
 /* 
 * Given an array of ints, compute recursively if the array contains somewhere a value followed in the array by that value times 10. We'll use the convention of considering only the part of the array that begins at the given index. In this way, a recursive call can pass index+1 to move down the array. The initial call will pass in index as 0.
-* @param n = the test integer.
-* @return the number of 7s in the integer
+* @param intNums = the test array. 
+* @param index = the index of the array. It starts as a 0.
+* @return boolean that is true if there is a number that is a multiple of 10 by the previous number.
 * @author E.Lai
 */
 
   public static boolean array220(int[] intNums, int index) {
+
+    // Base case. If the index of the array is ever greater than or equal to the length of the entire array, returns false and stops the recursion.
     if (index >= intNums.length - 1){
       return false;
+    
+    // If the current index has a number after it that is 10 times greater than the current index, returns true and stops the recursion.
     } else if (intNums[index] * 10 == intNums[index + 1]) {
       return true;
     }
+    
+    // Recursive call. If no boolean value has been returned, returns the entire array but increases the index by 1 each time. Therefore, this line iterates through the array after each recursion.
     return array220(intNums, index + 1);
   }
 }
