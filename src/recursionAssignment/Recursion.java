@@ -58,14 +58,14 @@ public class Recursion{
   public static boolean array220(int[] intNums, int index) {
 
     // Base case. If the index of the array is ever greater than or equal to the length of the entire array, returns false and stops the recursion.
-    if (index >= intNums.length - 1){
+    if (index >= intNums.length - 1) {
       return false;
     
     // If the current index has a number after it that is 10 times greater than the current index, returns true and stops the recursion.
     } else if (intNums[index] * 10 == intNums[index + 1]) {
       return true;
     }
-    
+
     // Recursive call. If no boolean value has been returned, returns the entire array but increases the index by 1 each time. Therefore, this line iterates through the array after each recursion.
     return array220(intNums, index + 1);
   }
