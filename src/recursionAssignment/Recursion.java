@@ -34,11 +34,16 @@ public class Recursion{
 */
 
   public static String changePi(String str) {
+
+    // Base case. Since the recursive call calls 2 characters, the base case must detect 1 or less characters other wise the recursive call will call out of the string. Stops the recursion when there are only 1 or less characters left in the string.
     if (str.length() <= 1) {
       return str;
+
+    // Recursive call. If the first 2 characters of the string is "pi", then it changes those characters into "3.14". Afterwards, repeats the method on the rest of the string.
     } else if (str.substring(0,2).equals("pi")) {
       return "3.14" + changePi(str.substring(2));
     }
+    // Recursive call. If the first 2 characters are not "pi", skips over the first character and repeats the method on the rest of the string.
     return str.substring(0,1) + changePi(str.substring(1));
   }
 }
