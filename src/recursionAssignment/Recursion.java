@@ -1,3 +1,8 @@
+/**
+* Recursion Assignment
+* @author: Ethan Lai
+*/
+
 package recursionAssignment;
 
 import java.io.*;
@@ -29,6 +34,7 @@ public class Recursion{
 
 /** 
 * Given a string, compute recursively (no loops) a new string where all appearances of "pi" have been replaced by "3.14".
+*
 * @param str = the Test string
 * @return a new string with the letters "pi" replaced with "3.14"
 * @author E.Lai
@@ -51,6 +57,7 @@ public class Recursion{
 
 /** 
 * Given an array of ints, compute recursively if the array contains somewhere a value followed in the array by that value times 10. We'll use the convention of considering only the part of the array that begins at the given index. In this way, a recursive call can pass index+1 to move down the array. The initial call will pass in index as 0.
+*
 * @param intNums = the test array. 
 * @param index = the index of the array. It starts as a 0.
 * @return boolean that is true if there is a number that is a multiple of 10 by the previous number.
