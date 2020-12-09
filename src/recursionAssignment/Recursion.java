@@ -4,8 +4,9 @@ import java.io.*;
 
 public class Recursion{
 
-/* 
+/** 
 * Given a non-negative int n, return the count of the occurrences of 7 as a digit, so for example 717 yields 2. (no loops). Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6), while divide (/) by 10 removes the rightmost digit (126 / 10 is 12). 
+*
 * @param n = the test integer.
 * @return the number of 7s in the integer
 * @author E.Lai
@@ -26,7 +27,7 @@ public class Recursion{
     return count7(n / 10);
   }
 
-/* 
+/** 
 * Given a string, compute recursively (no loops) a new string where all appearances of "pi" have been replaced by "3.14".
 * @param str = the Test string
 * @return a new string with the letters "pi" replaced with "3.14"
@@ -48,7 +49,7 @@ public class Recursion{
     return str.substring(0,1) + changePi(str.substring(1));
   }
 
-/* 
+/** 
 * Given an array of ints, compute recursively if the array contains somewhere a value followed in the array by that value times 10. We'll use the convention of considering only the part of the array that begins at the given index. In this way, a recursive call can pass index+1 to move down the array. The initial call will pass in index as 0.
 * @param intNums = the test array. 
 * @param index = the index of the array. It starts as a 0.
